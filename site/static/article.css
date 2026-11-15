@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  background: linear-gradient(#ffffff60, #ffffff60), url("./hero-texture.png") repeat #eeeeee;
+  color: #262521;
+  font: 1.05rem/1.7 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+article {
+  max-width: 40rem;
+  margin: auto;
+  padding: 0 1.5rem 4rem;
+}
+header {
+  margin-bottom: 3rem;
+}
+.subtitle {
+  max-width: 50ch;
+  margin: 1.4rem auto 0;
+  font: italic 400 clamp(.95rem, 2.8vw, 1.125rem)/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #353431;
+  text-align: center;
+  text-wrap: balance;
+}
+h2 {
+  margin: 2.4em 0 .65em;
+  color: #222120;
+  font: 500 clamp(1.2rem, 2.8vw, 1.4rem)/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #b9b4a9;
+  margin-top: 3rem;
+}
+a {
+  color: #26584c;
+}
+.hero {
+  display: block;
+  width: min(76rem, calc(100vw - 3rem));
+  max-width: none;
+  height: auto;
+  margin: 0 0 .75rem 50%;
+  transform: translateX(-50%);
+  clip-path: inset(3.3% 5.3% 0 0);
+  mask-image: linear-gradient(to right, transparent, black 6%, black 90%, transparent 94.7%), linear-gradient(to bottom, transparent 3.3%, black 12%, black 90%, transparent);
+  mask-composite: intersect;
+}
+
+.title-balance {
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto 1.1rem;
+  padding-bottom: clamp(1rem, 4vw, 2rem);
+}
+.title-balance h1 {
+  margin: 0;
+  transform: rotate(2.7deg);
+  border-bottom: 2px solid currentColor;
+  color: #121212;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: clamp(1rem, 5.7vw, 2.9rem);
+  line-height: .98;
+  letter-spacing: -.015em;
+  white-space: nowrap;
+}
+.title-balance::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - clamp(1rem, 4vw, 2rem) - 1px);
+  left: 50%;
+  width: clamp(.85rem, 4.25vw, 1.7rem);
+  aspect-ratio: 1.15;
+  transform: translateX(-50%);
+  background: #f45119;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.funding-map {
+  container-type: inline-size;
+  width: min(930px, calc(100vw - 2rem));
+  margin: clamp(3rem, 6vw, 4.5rem) 0 2rem 50%;
+  transform: translateX(-50%);
+}
+.funding-map iframe {
+  display: block;
+  width: 100%;
+  height: min(365.85px, calc(100cqw * 271 / 330));
+  border: 0;
+}
+@container (min-width: 550px) { .funding-map iframe { height: min(502px, calc(100cqw * 502 / 660)); } }
+@container (min-width: 850px) { .funding-map iframe { height: min(565px, calc(100cqw * 565 / 930)); } }
+.funding-history, .county-income {
+  max-width: 810px;
+}
+.funding-history figcaption, .county-income figcaption {
+  margin-inline: 3.5% 4px;
+  text-align: left;
+  color: #262521;
+}
+.county-income figcaption {
+  margin-left: calc(15px + (100cqw - 15px) * .0682);
+}
+.funding-history h3, .county-income h3 {
+  margin: 0;
+  font-size: clamp(.9rem, 2.55cqw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.funding-history p, .county-income p {
+  margin: .5rem 0 .6rem;
+  font-size: clamp(.75rem, 1.85cqw, .9rem);
+  line-height: 1.3;
+}
+@container (max-width: 550px) {
+  .county-income h3 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .county-income p {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+}
+.county-income iframe {
+  height: calc((100cqw - 15px) * 183 / 330 * .87);
+}
+.funding-history iframe {
+  height: calc((100cqw - 15px) * 183 / 330 * .86);
+}
+@media (max-width: 540px) {
+  .hero {
+    width: 100vw;
+    margin-bottom: .45rem;
+  }
+  .title-balance h1 {
+    font-size: clamp(1.55rem, 8.2vw, 2.125rem);
+  }
+}
