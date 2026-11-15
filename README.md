@@ -13,7 +13,3 @@ For the county analysis, library income and legal service-area populations are g
 - [Supporting data files](data/)
 
 The Notion methodology also links to the combined 1992–2021 survey file used in the analysis.
-
-## Website
-
-The SvelteKit article and graphics are in [`site/`](site/).
