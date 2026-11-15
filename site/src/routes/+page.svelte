@@ -10,7 +10,7 @@
 
 <main>
   <article>
-    <img class="hero" src="{base}/hero.png" width="3048" height="1160" alt="Archival portraits, library bookshelves, and an Ohio Library Association bulletin in a collage with orange accents." />
+    <img class="hero" src="{base}/hero-1600.webp" srcset="{base}/hero-800.webp 800w, {base}/hero-1600.webp 1600w" sizes="(max-width: 540px) 94vw, min(65rem, calc(100vw - 3rem))" width="1600" height="609" fetchpriority="high" alt="Archival portraits, library bookshelves, and an Ohio Library Association bulletin in a collage with orange accents." />
     <header>
       <div class="title-balance">
         <h1>Balancing the Books</h1>

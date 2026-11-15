@@ -37,7 +37,7 @@ a {
 }
 .hero {
   display: block;
-  width: min(76rem, calc(100vw - 3rem));
+  width: min(65rem, calc(100vw - 3rem));
   max-width: none;
   height: auto;
   margin: 0 0 .75rem 50%;
@@ -132,7 +132,7 @@ a {
 }
 @media (max-width: 540px) {
   .hero {
-    width: 100vw;
+    width: 94vw;
     margin-bottom: .45rem;
   }
   .title-balance h1 {
