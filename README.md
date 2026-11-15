@@ -2,6 +2,8 @@
 
 Ohio funds its libraries in a way no other state does, to even out resources across counties. Now the scales are tipping.
 
+Read it here: https://aishichandra.github.io/Ohio-Library-final/
+
 ## Methodology
 
 The analysis uses the Institute of Museum and Library Services’ Public Libraries Survey for 1992–2021. It compares total state-government funding across states, then looks at how the average Ohio public library’s revenue mix changed across state, local, federal, and other sources.

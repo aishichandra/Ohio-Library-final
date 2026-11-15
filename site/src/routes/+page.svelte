@@ -15,7 +15,7 @@
       <div class="title-balance">
         <h1>Balancing the Books</h1>
       </div>
-      <p class="subtitle">Ohio funds its libraries in a way no other state does, to even out resources across counties. Now the scales are tipping.</p>
+      <p class="subtitle">Ohio funds its libraries in a way no other state does, to even out resources across its counties. Now the scales are tipping.</p>
     </header>
 
     <p>A Reddit post asking why Ohio has one of the nation’s largest library networks sparked a thread of state pride. "Here, even cows are eligible for library cards," joked a librarian, pointing to a policy that lets any Ohio resident get a card at any public library in the state. One former Ohioan reminisced, "I love OhioLink!! I went to college in Ohio and it’s the thing I miss the most. Moving to NY for grad school, I realized that not all states offer something even remotely similar."</p>
@@ -69,7 +69,7 @@
     <p>Ohio residents can still get a library card anywhere in the state. What their nearest branch can offer its readers, humans and cows alike, depends on what it can afford.</p>
 
     <hr />
-    <p>Read the <a href="https://aishichandra.notion.site/p/Methodology-bdb75aa896964f3491699bb43ae9d55a?pvs=25">Methodology</a></p>
+    <p>Read the <a href="https://github.com/aishichandra/Ohio-Library-final">Methodology</a></p>
   </article>
 </main>
 
