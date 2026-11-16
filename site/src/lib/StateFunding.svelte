@@ -59,11 +59,11 @@
     {#each grid as step}
       {@const tick = y.domain()[1] * step / 10}
       {#if step % 2 === 0}
-        <text x={57} y={y(tick)} text-anchor="end" dominant-baseline="middle">{showShares ? Math.round(tick * 100) + "%" : (step === 10 ? "$" : "") + Math.round(tick / 1e6).toLocaleString("en-US")}</text>
+        <text class="axis-tick" x={57} y={y(tick)} text-anchor="end" dominant-baseline="middle">{showShares ? Math.round(tick * 100) + "%" : (step === 10 ? "$" : "") + Math.round(tick / 1e6).toLocaleString("en-US")}</text>
       {/if}
     {/each}
     {#each ticks as tick}
-      <text x={x(tick)} y={height - 12} text-anchor="middle">{tick}</text>
+      <text class="axis-tick" x={x(tick)} y={height - 12} text-anchor="middle">{tick}</text>
     {/each}
     <text class="axis-label" text-anchor="middle" transform="translate(23 {(bottom + 16) / 2}) rotate(-90)">{showShares ? 'Average share of revenue' : 'State library funding (millions)'}</text>
     {#if showShares}
@@ -89,24 +89,25 @@
 </figure>
 
 <style>
-  figure { container-type: inline-size; width: min(760px, calc(100vw - 2rem)); margin: clamp(3rem, 6vw, 4.5rem) 0 2rem 50%; transform: translateX(-50%); }
+  figure { container-type: inline-size; width: var(--chart-width); margin: clamp(3rem, 6vw, 4.5rem) 0 2rem 50%; transform: translateX(-50%); }
   figure.shares { margin-top: 1.85rem; }
-  .shares figcaption h3 { line-height: 1.55; word-spacing: -.055em; }
   .endpoint { font-size: 9px; }
-  figcaption h3 { margin: 0; font-size: clamp(.7rem, 2.13cqw, .99rem); font-weight: 700; line-height: 1.2; }
-  figcaption p { margin: .5rem 0 .6rem; font-size: clamp(.62rem, 1.65cqw, .7625rem); line-height: 1.3; }
-  figcaption { margin-inline: 62px 4px; text-align: left; }
   svg { display: block; width: 100%; height: auto; overflow: visible; }
   text { font-size: 10px; fill: #474747; }
+  .axis-tick { font-size: 9px; }
   .axis-label { font-size: 9px; font-weight: 500; }
   .direct-label { font-size: clamp(10px, 1.3vw, 14px); font-weight: 700; fill: #606060; }
   .ohio-label { fill: #c9411c; }
   path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
   .other { stroke: #656565; stroke-width: 1.4; opacity: .78; }
-  mark { display: inline-block; padding: .15em .4em; border-radius: .22em; line-height: 1.1; }
-  .state-highlight { background: #df5f35; color: white; }
-  .local-highlight { background: #8bc8e7; color: #151515; }
   .source-line { stroke-width: 3; }
   .source-line.secondary { stroke-width: 1.5; }
   .ohio { stroke: #df5f35; stroke-width: 3.5; }
+  .shares figcaption h3 { line-height: 1.55; word-spacing: -.055em; }
+  figcaption h3 { margin: 0; font-size: clamp(.7rem, 2.13cqw, .99rem); font-weight: 700; line-height: 1.2; }
+  figcaption p { margin: .5rem 0 .6rem; font-size: clamp(.62rem, 1.65cqw, .7625rem); line-height: 1.3; }
+  figcaption { margin-inline: 62px 4px; text-align: left; }
+  mark { display: inline-block; padding: .15em .4em; border-radius: .22em; line-height: 1.1; }
+  .state-highlight { background: #df5f35; color: white; }
+  .local-highlight { background: #8bc8e7; color: #151515; }
 </style>

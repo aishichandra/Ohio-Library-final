@@ -1,3 +1,4 @@
+:root {
 body {
   margin: 0;
   background: linear-gradient(#ffffff60, #ffffff60), url("./hero-texture.png") repeat #eeeeee;
@@ -5,6 +6,7 @@ body {
   font: 1.05rem/1.7 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 article {
+  --chart-width: min(850px, calc(100vw - 2rem));
   max-width: 40rem;
   margin: auto;
   padding: 0 1.5rem 4rem;
@@ -80,7 +82,7 @@ a {
 
 .funding-map {
   container-type: inline-size;
-  width: min(930px, calc(100vw - 2rem));
+  width: var(--chart-width);
   margin: clamp(3rem, 6vw, 4.5rem) 0 2rem 50%;
   transform: translateX(-50%);
 }
@@ -92,9 +94,6 @@ a {
 }
 @container (min-width: 550px) { .funding-map iframe { height: min(502px, calc(100cqw * 502 / 660)); } }
 @container (min-width: 850px) { .funding-map iframe { height: min(565px, calc(100cqw * 565 / 930)); } }
-.funding-history, .county-income {
-  max-width: 810px;
-}
 .funding-history figcaption, .county-income figcaption {
   margin-inline: 3.5% 4px;
   text-align: left;

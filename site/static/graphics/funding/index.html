@@ -172,6 +172,7 @@ function fitGraphic() {
     const maxScale = variant.dataset.size === 'xs' ? 1.35 : 1;
     const scale = Math.min(maxScale, width / artboardWidth);
     variant.style.marginInlineStart = (width / 2 - Number(variant.dataset.center) * scale) + 'px';
+    variant.style.setProperty('--year-tick-size', (9 / scale) + 'px');
     variant.style.transform = 'scale(' + scale + ')';
   }
 }
@@ -179,6 +180,7 @@ fitGraphic();
 window.addEventListener('resize', fitGraphic);
 </script>
 <style>
+.variant .g-artboard .g-pstyle2 { font-size: var(--year-tick-size, 9px) !important; }
 .variant .chart-headline, .variant .chart-subhead { left: 0; }
 .variant .chart-headline { top: 0; }
 .variant .chart-subhead { top: 56px; }
